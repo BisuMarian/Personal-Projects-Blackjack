@@ -103,8 +103,8 @@ House_hand = []
 Player1 = Player(Player_hand)
 House = Player(House_hand)
 
-suma_intrare = int(input("Introdu suma pe care doresti sa o joci: "))
-Player1.setMoney(suma_intrare)
+entry_funds = int(input("Please insert the value of your funds: "))
+Player1.setMoney(entry_funds)
 
 while(True):
     
@@ -143,7 +143,7 @@ while(True):
             printHouse(House)
         printHouse_final(House)
 
-    if Player1.score > 21:   #De implementat, daca treci de 21, house nu mai trage carti si jocul se incheie
+    if Player1.score > 21:
         if House.score > 21:
             Player1.Tie()
         else:
